@@ -1,0 +1,200 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4316
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.3-dev-2672-g6b9c2fca79 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 26 2024 01:37:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (44) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (53) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (63) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (74) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (89) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=114ec4h (1134276) map[0m
+[0;32mI (245) esp_image: segment 1: paddr=00124eec vaddr=3ffb0000 size=04e24h ( 20004) load[0m
+[0;32mI (248) esp_image: segment 2: paddr=00129d18 vaddr=40080000 size=06300h ( 25344) load[0m
+[0;32mI (255) esp_image: segment 3: paddr=00130020 vaddr=400d0020 size=b6698h (747160) map[0m
+[0;32mI (349) esp_image: segment 4: paddr=001e66c0 vaddr=40086300 size=15178h ( 86392) load[0m
+[0;32mI (377) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (377) boot: Disabling RNG early entropy source...[0m
+[0;32mI (389) cpu_start: Multicore app[0m
+[0;32mI (389) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (389) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (391) esp_psram: Speed: 80MHz[0m
+[0;32mI (395) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (403) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (878) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (886) cpu_start: Pro cpu start user code[0m
+[0;32mI (886) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (886) app_init: Application information:[0m
+[0;32mI (889) app_init: Project name:     person_detection[0m
+[0;32mI (895) app_init: App version:      1[0m
+[0;32mI (899) app_init: Compile time:     Jun 26 2024 01:37:29[0m
+[0;32mI (905) app_init: ELF file SHA256:  16e8dff3e...[0m
+[0;32mI (911) app_init: ESP-IDF:          v5.3-dev-2672-g6b9c2fca79[0m
+[0;32mI (917) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (922) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (927) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (932) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (939) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (945) heap_init: At 3FFB9A20 len 000265E0 (153 KiB): DRAM[0m
+[0;32mI (951) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (957) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (964) heap_init: At 4009B478 len 00004B88 (18 KiB): IRAM[0m
+[0;32mI (970) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (978) spi_flash: detected chip: generic[0m
+[0;32mI (982) spi_flash: flash io: qio[0m
+[0;33mW (986) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (997) main_task: Started on CPU0[0m
+[0;32mI (1007) main_task: Calling app_main()[0m
+I (1047) wifi:wifi driver task: 3ffc2454, prio:23, stack:6656, core=0
+I (1057) wifi:wifi firmware version: c94ad4b
+I (1057) wifi:wifi certification version: v7.0
+I (1057) wifi:config NVS flash: enabled
+I (1057) wifi:config nano formating: disabled
+I (1057) wifi:Init data frame dynamic rx buffer num: 32
+I (1067) wifi:Init static rx mgmt buffer num: 5
+I (1067) wifi:Init management short buffer num: 32
+I (1077) wifi:Init dynamic tx buffer num: 32
+I (1077) wifi:Init tx cache buffer num: 32
+I (1077) wifi:Init static rx buffer size: 1600
+I (1087) wifi:Init static rx buffer num: 10
+I (1087) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1097) wifi_init: rx ba win: 6[0m
+[0;32mI (1097) wifi_init: accept mbox: 6[0m
+[0;32mI (1097) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1107) wifi_init: udp mbox: 6[0m
+[0;32mI (1107) wifi_init: tcp mbox: 6[0m
+[0;32mI (1117) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1117) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1117) wifi_init: tcp mss: 1440[0m
+[0;32mI (1127) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1127) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1137) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (1207) wifi:mode : sta (34:98:7a:b6:fe:f8)
+I (1207) wifi:enable tsf
+Attempting connection to WiFi... 
+I (1217) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (1217) wifi:state: init -> auth (b0)
+I (1217) wifi:state: auth -> assoc (0)
+I (1227) wifi:state: assoc -> run (10)
+I (1357) wifi:connected with lucas, aid = 1, channel 6, BW20, bssid = fa:1d:d3:19:55:1c
+I (1357) wifi:security: WPA2-PSK, phy: bgn, rssi: -50
+I (1357) wifi:pm start, type: 1
+
+I (1357) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+Connected to WiFi! 
+I (1377) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (2367) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+Got WiFi's IP! 
+
+Total heap size: 4486800
+Free heap size: 4359804
+Total PSRAM size: 8388608
+Free PSRAM size: 4191548
+Free heap size after allocation: 3998328
+Free PSRAM size after allocation: 3830072
+[0;32mI (3217) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (3217) cam_hal: cam init ok[0m
+[0;32mI (3217) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (3227) sccb: sccb_i2c_port=1[0m
+[0;32mI (3227) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3267) camera: Detected camera at address=0x30[0m
+[0;32mI (3267) camera: Detected OV2640 camera[0m
+[0;32mI (3267) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (3337) esp32 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 4, dma_half_buffer_min:  3072, dma_half_buffer: 12288,lines_per_half_buffer: 16, dma_buffer_size: 24576, image_size: 18432[0m
+[0;32mI (3347) cam_hal: buffer_size: 24576, half_buffer_size: 12288, node_buffer_size: 3072, node_cnt: 8, total_cnt: 1[0m
+[0;32mI (3357) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (3367) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (3367) cam_hal: cam config ok[0m
+[0;32mI (3377) ov2640: Set PLL: clk_2x: 0, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+
+cam_hal: EV-VSYNC-OVF
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.218750 percent accuracy."}
+
+I (11387) wifi:<ba-add>idx:0 (ifx:0, fa:1d:d3:19:55:1c), tid:0, ssn:2, winSize:64
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.218750 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.992188
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+[0;31mE (35127) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (35127) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (35127) HTTP_CLIENT: Connection failed, sock < 0[0m
+OCURRIO UN ERROR.... PUEDE QUE SERVIDOR NO HAYA DEVUELTO NADA!!!
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Suzuki Swift
+JSON DATA: 
+{"message": "Suzuki Swift with 35.937500 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Suzuki Swift with 35.937500 percent accuracy."}}
+Audi: 0.042969
+
+Hyundai Creta: 0.250000
+
+Mahindra Scorpio: 0.027344
+
+Other: 0.027344
+
+Rolls Royce: 0.027344
+
+Suzuki Swift: 0.359375
+
+Tata Safari: 0.015625
+
+Toyota Innova: 0.250000
+

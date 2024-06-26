@@ -1,0 +1,2117 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4316
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.3-dev-2672-g6b9c2fca79 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 26 2024 01:37:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (44) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (53) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (63) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (74) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (89) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=114ec4h (1134276) map[0m
+[0;32mI (245) esp_image: segment 1: paddr=00124eec vaddr=3ffb0000 size=04e24h ( 20004) load[0m
+[0;32mI (248) esp_image: segment 2: paddr=00129d18 vaddr=40080000 size=06300h ( 25344) load[0m
+[0;32mI (255) esp_image: segment 3: paddr=00130020 vaddr=400d0020 size=b6698h (747160) map[0m
+[0;32mI (349) esp_image: segment 4: paddr=001e66c0 vaddr=40086300 size=15178h ( 86392) load[0m
+[0;32mI (377) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (377) boot: Disabling RNG early entropy source...[0m
+[0;32mI (389) cpu_start: Multicore app[0m
+[0;32mI (389) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (389) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (391) esp_psram: Speed: 80MHz[0m
+[0;32mI (395) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (403) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (878) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (886) cpu_start: Pro cpu start user code[0m
+[0;32mI (886) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (886) app_init: Application information:[0m
+[0;32mI (889) app_init: Project name:     person_detection[0m
+[0;32mI (895) app_init: App version:      1[0m
+[0;32mI (899) app_init: Compile time:     Jun 26 2024 01:37:29[0m
+[0;32mI (905) app_init: ELF file SHA256:  16e8dff3e...[0m
+[0;32mI (911) app_init: ESP-IDF:          v5.3-dev-2672-g6b9c2fca79[0m
+[0;32mI (917) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (922) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (927) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (932) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (939) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (945) heap_init: At 3FFB9A20 len 000265E0 (153 KiB): DRAM[0m
+[0;32mI (951) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (957) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (964) heap_init: At 4009B478 len 00004B88 (18 KiB): IRAM[0m
+[0;32mI (970) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (978) spi_flash: detected chip: generic[0m
+[0;32mI (982) spi_flash: flash io: qio[0m
+[0;33mW (986) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (997) main_task: Started on CPU0[0m
+[0;32mI (1007) main_task: Calling app_main()[0m
+I (1047) wifi:wifi driver task: 3ffc2454, prio:23, stack:6656, core=0
+I (1057) wifi:wifi firmware version: c94ad4b
+I (1057) wifi:wifi certification version: v7.0
+I (1057) wifi:config NVS flash: enabled
+I (1057) wifi:config nano formating: disabled
+I (1057) wifi:Init data frame dynamic rx buffer num: 32
+I (1067) wifi:Init static rx mgmt buffer num: 5
+I (1067) wifi:Init management short buffer num: 32
+I (1077) wifi:Init dynamic tx buffer num: 32
+I (1077) wifi:Init tx cache buffer num: 32
+I (1077) wifi:Init static rx buffer size: 1600
+I (1087) wifi:Init static rx buffer num: 10
+I (1087) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1097) wifi_init: rx ba win: 6[0m
+[0;32mI (1097) wifi_init: accept mbox: 6[0m
+[0;32mI (1097) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1107) wifi_init: udp mbox: 6[0m
+[0;32mI (1107) wifi_init: tcp mbox: 6[0m
+[0;32mI (1117) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1117) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1117) wifi_init: tcp mss: 1440[0m
+[0;32mI (1127) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1127) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1137) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (1207) wifi:mode : sta (34:98:7a:b6:fe:f8)
+I (1207) wifi:enable tsf
+Attempting connection to WiFi... 
+I (1217) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (1217) wifi:state: init -> auth (b0)
+I (1217) wifi:state: auth -> assoc (0)
+I (1227) wifi:state: assoc -> run (10)
+I (1317) wifi:connected with lucas, aid = 1, channel 6, BW20, bssid = fa:1d:d3:19:55:1c
+I (1317) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (1317) wifi:pm start, type: 1
+
+I (1317) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1327) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Connected to WiFi! 
+[0;32mI (2337) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+Got WiFi's IP! 
+
+Total heap size: 4486800
+Free heap size: 4359616
+Total PSRAM size: 8388608
+Free PSRAM size: 4191548
+Free heap size after allocation: 3998140
+Free PSRAM size after allocation: 3830072
+[0;32mI (3217) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (3217) cam_hal: cam init ok[0m
+[0;32mI (3217) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (3227) sccb: sccb_i2c_port=1[0m
+[0;32mI (3227) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3267) camera: Detected camera at address=0x30[0m
+[0;32mI (3267) camera: Detected OV2640 camera[0m
+[0;32mI (3267) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (3337) esp32 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 4, dma_half_buffer_min:  3072, dma_half_buffer: 12288,lines_per_half_buffer: 16, dma_buffer_size: 24576, image_size: 18432[0m
+[0;32mI (3347) cam_hal: buffer_size: 24576, half_buffer_size: 12288, node_buffer_size: 3072, node_cnt: 8, total_cnt: 1[0m
+[0;32mI (3357) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (3367) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (3367) cam_hal: cam config ok[0m
+[0;32mI (3377) ov2640: Set PLL: clk_2x: 0, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 82.421875 percent accuracy."}
+
+I (11397) wifi:<ba-add>idx:0 (ifx:0, fa:1d:d3:19:55:1c), tid:0, ssn:3, winSize:64
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 82.421875 percent accuracy."}}
+Audi: 0.015625
+
+Hyundai Creta: 0.824219
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.093750
+
+Tata Safari: 0.015625
+
+Toyota Innova: 0.046875
+
+Image Captured
+
+Detected car: Audi
+JSON DATA: 
+{"message": "Audi with 48.828125 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Audi with 48.828125 percent accuracy."}}
+Audi: 0.488281
+
+Hyundai Creta: 0.117188
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.000000
+
+Rolls Royce: 0.019531
+
+Suzuki Swift: 0.339844
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.027344
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 44.531250 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 44.531250 percent accuracy."}}
+Audi: 0.035156
+
+Hyundai Creta: 0.445312
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.000000
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.445312
+
+Tata Safari: 0.011719
+
+Toyota Innova: 0.050781
+
+Image Captured
+
+Detected car: Audi
+JSON DATA: 
+{"message": "Audi with 65.234375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Audi with 65.234375 percent accuracy."}}
+Audi: 0.652344
+
+Hyundai Creta: 0.050781
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.000000
+
+Rolls Royce: 0.027344
+
+Suzuki Swift: 0.222656
+
+Tata Safari: 0.007812
+
+Toyota Innova: 0.035156
+
+Image Captured
+
+Detected car: Audi
+JSON DATA: 
+{"message": "Audi with 48.046875 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Audi with 48.046875 percent accuracy."}}
+Audi: 0.480469
+
+Hyundai Creta: 0.113281
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.000000
+
+Rolls Royce: 0.007812
+
+Suzuki Swift: 0.335938
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.054688
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 95.703125 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 95.703125 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.957031
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.039062
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.003906
+
+Image Captured
+
+Detected car: Tata Safari
+JSON DATA: 
+{"message": "Tata Safari with 27.734375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Tata Safari with 27.734375 percent accuracy."}}
+Audi: 0.007812
+
+Hyundai Creta: 0.191406
+
+Mahindra Scorpio: 0.093750
+
+Other: 0.011719
+
+Rolls Royce: 0.132812
+
+Suzuki Swift: 0.003906
+
+Tata Safari: 0.277344
+
+Toyota Innova: 0.277344
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 87.890625 percent accuracy."}
+
+[0;31mE (146997) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (146997) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (146997) HTTP_CLIENT: Connection failed, sock < 0[0m
+OCURRIO UN ERROR.... PUEDE QUE SERVIDOR NO HAYA DEVUELTO NADA!!!
+Audi: 0.000000
+
+Hyundai Creta: 0.003906
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.878906
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.011719
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.101562
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 98.437500 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 98.437500 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.003906
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.984375
+
+Image Captured
+
+Detected car: Tata Safari
+JSON DATA: 
+{"message": "Tata Safari with 66.015625 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Tata Safari with 66.015625 percent accuracy."}}
+Audi: 0.019531
+
+Hyundai Creta: 0.035156
+
+Mahindra Scorpio: 0.109375
+
+Other: 0.054688
+
+Rolls Royce: 0.109375
+
+Suzuki Swift: 0.007812
+
+Tata Safari: 0.660156
+
+Toyota Innova: 0.007812
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 88.281250 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 88.281250 percent accuracy."}}
+Audi: 0.003906
+
+Hyundai Creta: 0.003906
+
+Mahindra Scorpio: 0.007812
+
+Other: 0.882812
+
+Rolls Royce: 0.023438
+
+Suzuki Swift: 0.035156
+
+Tata Safari: 0.015625
+
+Toyota Innova: 0.023438
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 83.593750 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 83.593750 percent accuracy."}}
+Audi: 0.003906
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.835938
+
+Rolls Royce: 0.031250
+
+Suzuki Swift: 0.003906
+
+Tata Safari: 0.046875
+
+Toyota Innova: 0.066406
+
+Image Captured
+
+Detected car: Tata Safari
+JSON DATA: 
+{"message": "Tata Safari with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Tata Safari with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.996094
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 70.312500 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 70.312500 percent accuracy."}}
+Audi: 0.003906
+
+Hyundai Creta: 0.703125
+
+Mahindra Scorpio: 0.054688
+
+Other: 0.007812
+
+Rolls Royce: 0.007812
+
+Suzuki Swift: 0.019531
+
+Tata Safari: 0.117188
+
+Toyota Innova: 0.082031
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 64.453125 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 64.453125 percent accuracy."}}
+Audi: 0.003906
+
+Hyundai Creta: 0.644531
+
+Mahindra Scorpio: 0.152344
+
+Other: 0.000000
+
+Rolls Royce: 0.007812
+
+Suzuki Swift: 0.003906
+
+Tata Safari: 0.152344
+
+Toyota Innova: 0.035156
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 73.828125 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 73.828125 percent accuracy."}}
+Audi: 0.019531
+
+Hyundai Creta: 0.003906
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.738281
+
+Rolls Royce: 0.019531
+
+Suzuki Swift: 0.085938
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.121094
+
+Image Captured
+
+Detected car: Suzuki Swift
+JSON DATA: 
+{"message": "Suzuki Swift with 37.109375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Suzuki Swift with 37.109375 percent accuracy."}}
+Audi: 0.125000
+
+Hyundai Creta: 0.257812
+
+Mahindra Scorpio: 0.015625
+
+Other: 0.003906
+
+Rolls Royce: 0.042969
+
+Suzuki Swift: 0.371094
+
+Tata Safari: 0.007812
+
+Toyota Innova: 0.179688
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 77.734375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 77.734375 percent accuracy."}}
+Audi: 0.007812
+
+Hyundai Creta: 0.777344
+
+Mahindra Scorpio: 0.042969
+
+Other: 0.000000
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.015625
+
+Tata Safari: 0.019531
+
+Toyota Innova: 0.128906
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 61.718750 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 61.718750 percent accuracy."}}
+Audi: 0.101562
+
+Hyundai Creta: 0.003906
+
+Mahindra Scorpio: 0.011719
+
+Other: 0.617188
+
+Rolls Royce: 0.207031
+
+Suzuki Swift: 0.015625
+
+Tata Safari: 0.015625
+
+Toyota Innova: 0.023438
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 50.000000 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 50.000000 percent accuracy."}}
+Audi: 0.082031
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.500000
+
+Rolls Royce: 0.167969
+
+Suzuki Swift: 0.242188
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.003906
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 56.250000 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 56.250000 percent accuracy."}}
+Audi: 0.066406
+
+Hyundai Creta: 0.007812
+
+Mahindra Scorpio: 0.011719
+
+Other: 0.562500
+
+Rolls Royce: 0.093750
+
+Suzuki Swift: 0.191406
+
+Tata Safari: 0.007812
+
+Toyota Innova: 0.066406
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 49.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 49.609375 percent accuracy."}}
+Audi: 0.011719
+
+Hyundai Creta: 0.496094
+
+Mahindra Scorpio: 0.058594
+
+Other: 0.003906
+
+Rolls Royce: 0.011719
+
+Suzuki Swift: 0.039062
+
+Tata Safari: 0.027344
+
+Toyota Innova: 0.347656
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 87.109375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 87.109375 percent accuracy."}}
+Audi: 0.007812
+
+Hyundai Creta: 0.871094
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.007812
+
+Tata Safari: 0.007812
+
+Toyota Innova: 0.101562
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 50.000000 percent accuracy."}
+
+[0;31mE (543987) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (543987) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (543987) HTTP_CLIENT: Connection failed, sock < 0[0m
+OCURRIO UN ERROR.... PUEDE QUE SERVIDOR NO HAYA DEVUELTO NADA!!!
+Audi: 0.000000
+
+Hyundai Creta: 0.500000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.500000
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 85.546875 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 85.546875 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.140625
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.855469
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 94.140625 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 94.140625 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.941406
+
+Mahindra Scorpio: 0.027344
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.011719
+
+Toyota Innova: 0.019531
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 30.078125 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 30.078125 percent accuracy."}}
+Audi: 0.035156
+
+Hyundai Creta: 0.144531
+
+Mahindra Scorpio: 0.144531
+
+Other: 0.101562
+
+Rolls Royce: 0.101562
+
+Suzuki Swift: 0.023438
+
+Tata Safari: 0.144531
+
+Toyota Innova: 0.300781
+
+Image Captured
+
+Detected car: Mahindra Scorpio
+JSON DATA: 
+{"message": "Mahindra Scorpio with 89.843750 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Mahindra Scorpio with 89.843750 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.070312
+
+Mahindra Scorpio: 0.898438
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.011719
+
+Toyota Innova: 0.015625
+
+Image Captured
+
+Detected car: Mahindra Scorpio
+JSON DATA: 
+{"message": "Mahindra Scorpio with 28.906250 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Mahindra Scorpio with 28.906250 percent accuracy."}}
+Audi: 0.097656
+
+Hyundai Creta: 0.046875
+
+Mahindra Scorpio: 0.289062
+
+Other: 0.066406
+
+Rolls Royce: 0.289062
+
+Suzuki Swift: 0.046875
+
+Tata Safari: 0.097656
+
+Toyota Innova: 0.066406
+
+Image Captured
+
+Detected car: Tata Safari
+JSON DATA: 
+{"message": "Tata Safari with 48.046875 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Tata Safari with 48.046875 percent accuracy."}}
+Audi: 0.039062
+
+Hyundai Creta: 0.039062
+
+Mahindra Scorpio: 0.011719
+
+Other: 0.011719
+
+Rolls Royce: 0.335938
+
+Suzuki Swift: 0.003906
+
+Tata Safari: 0.480469
+
+Toyota Innova: 0.078125
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.996094
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.996094
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 57.812500 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 57.812500 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.578125
+
+Mahindra Scorpio: 0.281250
+
+Other: 0.011719
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.003906
+
+Tata Safari: 0.093750
+
+Toyota Innova: 0.023438
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 92.187500 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 92.187500 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.074219
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.003906
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.921875
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 81.640625 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 81.640625 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.816406
+
+Mahindra Scorpio: 0.136719
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.046875
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Audi
+JSON DATA: 
+{"message": "Audi with 58.593750 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Audi with 58.593750 percent accuracy."}}
+Audi: 0.585938
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.410156
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 77.734375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 77.734375 percent accuracy."}}
+Audi: 0.019531
+
+Hyundai Creta: 0.777344
+
+Mahindra Scorpio: 0.031250
+
+Other: 0.000000
+
+Rolls Royce: 0.011719
+
+Suzuki Swift: 0.011719
+
+Tata Safari: 0.062500
+
+Toyota Innova: 0.089844
+
+Image Captured
+
+Detected car: Hyundai Creta
+JSON DATA: 
+{"message": "Hyundai Creta with 75.390625 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Hyundai Creta with 75.390625 percent accuracy."}}
+Audi: 0.031250
+
+Hyundai Creta: 0.753906
+
+Mahindra Scorpio: 0.042969
+
+Other: 0.000000
+
+Rolls Royce: 0.011719
+
+Suzuki Swift: 0.015625
+
+Tata Safari: 0.058594
+
+Toyota Innova: 0.085938
+
+Image Captured
+
+Detected car: Audi
+JSON DATA: 
+{"message": "Audi with 50.000000 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Audi with 50.000000 percent accuracy."}}
+Audi: 0.500000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.500000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 87.890625 percent accuracy."}
+
+[0;31mE (846577) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (846577) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (846577) HTTP_CLIENT: Connection failed, sock < 0[0m
+OCURRIO UN ERROR.... PUEDE QUE SERVIDOR NO HAYA DEVUELTO NADA!!!
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.070312
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.050781
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.878906
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 66.015625 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 66.015625 percent accuracy."}}
+Audi: 0.027344
+
+Hyundai Creta: 0.222656
+
+Mahindra Scorpio: 0.007812
+
+Other: 0.000000
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.074219
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.660156
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 30.078125 percent accuracy."}
+
+[0;31mE (888147) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (888147) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (888147) HTTP_CLIENT: Connection failed, sock < 0[0m
+OCURRIO UN ERROR.... PUEDE QUE SERVIDOR NO HAYA DEVUELTO NADA!!!
+Audi: 0.101562
+
+Hyundai Creta: 0.207031
+
+Mahindra Scorpio: 0.101562
+
+Other: 0.023438
+
+Rolls Royce: 0.050781
+
+Suzuki Swift: 0.144531
+
+Tata Safari: 0.070312
+
+Toyota Innova: 0.300781
+
+Image Captured
+
+Detected car: Audi
+JSON DATA: 
+{"message": "Audi with 86.328125 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Audi with 86.328125 percent accuracy."}}
+Audi: 0.863281
+
+Hyundai Creta: 0.023438
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.000000
+
+Rolls Royce: 0.035156
+
+Suzuki Swift: 0.046875
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.023438
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 73.437500 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 73.437500 percent accuracy."}}
+Audi: 0.003906
+
+Hyundai Creta: 0.250000
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.007812
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.734375
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Tata Safari
+JSON DATA: 
+{"message": "Tata Safari with 89.453125 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Tata Safari with 89.453125 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.023438
+
+Mahindra Scorpio: 0.070312
+
+Other: 0.000000
+
+Rolls Royce: 0.007812
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.894531
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 78.125000 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 78.125000 percent accuracy."}}
+Audi: 0.019531
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.781250
+
+Rolls Royce: 0.183594
+
+Suzuki Swift: 0.015625
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 68.359375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 68.359375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.683594
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.078125
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.230469
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.003906
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Tata Safari
+JSON DATA: 
+{"message": "Tata Safari with 58.203125 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Tata Safari with 58.203125 percent accuracy."}}
+Audi: 0.046875
+
+Hyundai Creta: 0.015625
+
+Mahindra Scorpio: 0.031250
+
+Other: 0.023438
+
+Rolls Royce: 0.285156
+
+Suzuki Swift: 0.007812
+
+Tata Safari: 0.582031
+
+Toyota Innova: 0.007812
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 98.437500 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 98.437500 percent accuracy."}}
+Audi: 0.007812
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.984375
+
+Rolls Royce: 0.007812
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Suzuki Swift
+JSON DATA: 
+{"message": "Suzuki Swift with 44.531250 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Suzuki Swift with 44.531250 percent accuracy."}}
+Audi: 0.074219
+
+Hyundai Creta: 0.003906
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.152344
+
+Rolls Royce: 0.312500
+
+Suzuki Swift: 0.445312
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.007812
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 98.046875 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 98.046875 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.011719
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.980469
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.996094
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 69.921875 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 69.921875 percent accuracy."}}
+Audi: 0.003906
+
+Hyundai Creta: 0.039062
+
+Mahindra Scorpio: 0.238281
+
+Other: 0.000000
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.011719
+
+Toyota Innova: 0.699219
+
+Image Captured
+
+Detected car: Mahindra Scorpio
+JSON DATA: 
+{"message": "Mahindra Scorpio with 79.296875 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Mahindra Scorpio with 79.296875 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.062500
+
+Mahindra Scorpio: 0.792969
+
+Other: 0.000000
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.128906
+
+Toyota Innova: 0.003906
+
+Image Captured
+
+Detected car: Tata Safari
+JSON DATA: 
+{"message": "Tata Safari with 69.531250 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Tata Safari with 69.531250 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.054688
+
+Mahindra Scorpio: 0.234375
+
+Other: 0.003906
+
+Rolls Royce: 0.007812
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.695312
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 94.531250 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 94.531250 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.054688
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.945312
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 94.531250 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 94.531250 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.050781
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.945312
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 96.484375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 96.484375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.027344
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.007812
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.964844
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Tata Safari
+JSON DATA: 
+{"message": "Tata Safari with 70.703125 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Tata Safari with 70.703125 percent accuracy."}}
+Audi: 0.007812
+
+Hyundai Creta: 0.039062
+
+Mahindra Scorpio: 0.082031
+
+Other: 0.039062
+
+Rolls Royce: 0.082031
+
+Suzuki Swift: 0.003906
+
+Tata Safari: 0.707031
+
+Toyota Innova: 0.039062
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 78.906250 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 78.906250 percent accuracy."}}
+Audi: 0.019531
+
+Hyundai Creta: 0.062500
+
+Mahindra Scorpio: 0.011719
+
+Other: 0.042969
+
+Rolls Royce: 0.031250
+
+Suzuki Swift: 0.011719
+
+Tata Safari: 0.031250
+
+Toyota Innova: 0.789062
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 98.046875 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 98.046875 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.980469
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.019531
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 94.140625 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 94.140625 percent accuracy."}}
+Audi: 0.003906
+
+Hyundai Creta: 0.035156
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.000000
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.019531
+
+Toyota Innova: 0.941406
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 40.234375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 40.234375 percent accuracy."}}
+Audi: 0.007812
+
+Hyundai Creta: 0.281250
+
+Mahindra Scorpio: 0.195312
+
+Other: 0.011719
+
+Rolls Royce: 0.046875
+
+Suzuki Swift: 0.011719
+
+Tata Safari: 0.046875
+
+Toyota Innova: 0.402344
+
+Image Captured
+
+Detected car: Rolls Royce
+JSON DATA: 
+{"message": "Rolls Royce with 79.296875 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Rolls Royce with 79.296875 percent accuracy."}}
+Audi: 0.128906
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.007812
+
+Other: 0.042969
+
+Rolls Royce: 0.792969
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.023438
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 96.484375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 96.484375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.964844
+
+Rolls Royce: 0.007812
+
+Suzuki Swift: 0.007812
+
+Tata Safari: 0.011719
+
+Toyota Innova: 0.003906
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Toyota Innova
+JSON DATA: 
+{"message": "Toyota Innova with 86.718750 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Toyota Innova with 86.718750 percent accuracy."}}
+Audi: 0.007812
+
+Hyundai Creta: 0.070312
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.000000
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.046875
+
+Tata Safari: 0.003906
+
+Toyota Innova: 0.867188
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 98.046875 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 98.046875 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.980469
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.019531
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 56.250000 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 56.250000 percent accuracy."}}
+Audi: 0.003906
+
+Hyundai Creta: 0.023438
+
+Mahindra Scorpio: 0.003906
+
+Other: 0.562500
+
+Rolls Royce: 0.003906
+
+Suzuki Swift: 0.003906
+
+Tata Safari: 0.007812
+
+Toyota Innova: 0.394531
+
+Image Captured
+
+Detected car: Other
+JSON DATA: 
+{"message": "Other with 99.609375 percent accuracy."}
+
+HTTP_EVENT_ON_DATA: {"message":{"message":"Other with 99.609375 percent accuracy."}}
+Audi: 0.000000
+
+Hyundai Creta: 0.000000
+
+Mahindra Scorpio: 0.000000
+
+Other: 0.996094
+
+Rolls Royce: 0.000000
+
+Suzuki Swift: 0.000000
+
+Tata Safari: 0.000000
+
+Toyota Innova: 0.000000
+

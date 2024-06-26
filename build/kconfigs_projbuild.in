@@ -1,0 +1,7 @@
+source "/home/lucasfreyess/esp/idf/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/home/lucasfreyess/esp/idf/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "/home/lucasfreyess/esp/idf/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "/home/lucasfreyess/esp/idf/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/home/lucasfreyess/esp/idf/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/home/lucasfreyess/esp/projects_tf/car_detection/main/Kconfig.projbuild"
+source "/home/lucasfreyess/esp/projects_tf/car_detection/managed_components/espressif__esp-nn/Kconfig.projbuild"
